@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domashno3</title>
+</head>
+<body>
+    <script type="text/javascript">
+       //Задача 1
+        alert("Мазе бот v1 на Вашите услуги");
+
+        //Задача 2
+       
+        let visitorFirstName   = prompt("Как се казваш? - Първо име");
+        let visitorSecondName  = prompt("Как се казваш? - Фамилия");
+        let visitorAge         = prompt("На колко години си?");
+        let visitorGender      = prompt("Какъв пол си");
+        console.log(`Първо име ${visitorFirstName}`);
+        console.log(`Фамилия ${visitorSecondName}`);
+        console.log(`На колко години си? ${visitorAge}`);
+        console.log(`Какъв пол си? ${visitorGender}`);
+
+        
+        let isVisitorGenderMen   = visitorGender == "мъж";
+        let isVisitorGenderWoman = visitorGender == "жена";
+        let isVisitorAdault      = visitorAge     >= 18;
+        let isVisitorUnderage    = visitorAge    < 18;
+        
+        
+        let isVisitorGenderMenAdault     = (visitorGender == "мъж")  && (visitorAge >= 18);        ;
+        let isVisitorGenderWomanAdault   = (visitorGender == "жена") && (visitorAge >= 18);
+        let isVisitorGenderMenUnderage   = (visitorGender == "мъж")  && (visitorAge < 18);
+        let isVisitorGenderWomanUnderage = (visitorGender == "жена") && (visitorAge < 18);
+      
+        if(isVisitorGenderMenAdault) {
+            console.log(`Здравейте г-н ${visitorSecondName}`);
+            
+        }
+        if(isVisitorGenderWomanAdault) {
+            console.log(`Здравейте г-жо ${visitorSecondName}`);   
+        }
+        if(isVisitorGenderMenUnderage) {
+             console.log("Здрасти малкия не пускаме дечица тука - бягай за бира"); 
+        }    
+        if(isVisitorGenderWomanUnderage) { 
+            console.log("Здрасти малката, не пускаме дечица тука - отивай да си играеш");
+
+        }
+        //Задача 3
+        
+       let visitorUniqueID       = Math.floor((Math.random() * 100) + 1);
+       let visitorFaculityNumber =  Math.floor((Math.random() * 100) + 1);
+       
+        alert(`Добре дошъл в мазето на баба  ${visitorFirstName} ${visitorSecondName}`);
+        alert(`Ти се идентифицара с номер: уникален идентификатор-${visitorUniqueID} / факлутетси номер-${visitorFaculityNumber}`);
+        alert(`Ти си на ${visitorAge} години`);
+
+        //Задача 4
+
+        let applesCider      = "ябълково вино";
+        let smokedMeat       = "пушено месо";
+        let plumJam          = "сливов мармалад";
+        let marinatedPeppers = "мариновани чушки";
+        let piggyBank        = "прасенце касичка";
+
+        //Задача 5
+
+        let applesCiderLiters      = 10;
+        let smokedMeatWeight       = 5;
+        let plumJamNumber          = 9;
+        let marinatedPeppersNumber = 4;
+        let piggyBankLeva          = 184.35; 
+
+        //Задача 6
+
+        let applesCiderSignature            = (`C7544_${applesCiderLiters}`);
+        let smokedMeatWeightSignature       = (`M7441_${smokedMeatWeight}`);
+        let plumJamNumberSignature          = (`S6491_${plumJamNumber}`);
+        let marinatedPeppersNumberSignature = (`P7485 _${marinatedPeppersNumber}`);
+        let piggyBankLevaSignature          = (`B6584_${piggyBankLeva}`);
+
+        //Задача 7
+
+        alert(`Отчет за продуктите в мазето`);
+        let  cider    = {Продукт:`${applesCider}`, Количество:`${applesCiderLiters}`, новСериенНомер:`${applesCiderSignature}`};
+        let meat      = {Продукт:`${smokedMeat}`, Количество:`${smokedMeatWeight}`, новСериенНомер:`${smokedMeatWeightSignature}`};
+        let  jam      = {Продукт:`${plumJam}`,  Количество:`${plumJamNumber}`, новСериенНомер:`${plumJamNumberSignature}`};
+        let peppers   = {Продукт:`${marinatedPeppers}`, Количество:`${marinatedPeppersNumber}`, новСериенНомер:`${marinatedPeppersNumberSignature}`};
+        let bank      = {Продукт:`${piggyBank}`, Количество:`${piggyBankLeva}`, новСериенНомер:`${piggyBankLevaSignature}`};
+
+        console.table([cider, meat, jam, peppers, bank]);
+
+        //Задача 8
+ 
+
+        if(isVisitorAdault) {
+        var donationResponse = prompt(`Желаете ли дарите пари? да/не`);
+        
+        }
+        
+        var donationResponsePositive = donationResponse == "да";
+        var donationResponseNegative = donationResponse == "не"; 
+        
+        if(isVisitorAdault && donationResponseNegative) {
+            alert("Голяма си стипца!"); }
+
+        if(isVisitorAdault && donationResponsePositive) {
+           
+                let donation = prompt('Въведете сума за дарение');
+                let donatinVAT = 0;
+                donatinVAT = (+donation + (0.2 * +donation));
+                    
+            alert(`Сумата, която трябва да дарите с 20% обложен данък е ${donatinVAT}`);
+        }
+            
+        
+
+
+
+
+    
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
